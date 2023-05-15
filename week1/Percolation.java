@@ -1,7 +1,5 @@
 package week1;
 
-import java.util.Arrays;
-
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
@@ -11,15 +9,17 @@ public class Percolation {
     private int area;
     private WeightedQuickUnionUF uf;
 
-    public Percolation(int N) {
-        if (N <= 0) {
+    public Percolation(int n) {
+        if (n <= 0) {
             throw new IllegalArgumentException("Invalid grid size given");
         }
-        n = N;
-        area = n * n;
-        grid = new boolean[area];
-        Arrays.fill(grid, false);
-        uf = new WeightedQuickUnionUF(area + 2);
+        this.n = n;
+        this.area = this.n * this.n;
+        grid = new boolean[this.area];
+        for (int i = 0; i < this.area; i++) {
+            grid[i] = false;
+        }
+        uf = new WeightedQuickUnionUF(this.area + 2);
     }
 
     public void open(int row, int col) {
@@ -27,9 +27,9 @@ public class Percolation {
             openSites++;
             int idx = this.convertCoorToIdx(row, col);
             grid[idx] = true;
-            if (idx < n) {
+            if (idx < this.n) {
                 this.uf.union(idx + 1, 0);
-            } else if (idx >= this.area - n) {
+            } else if (idx >= this.area - this.n) {
                 this.uf.union(idx + 1, this.area + 1);
             }
             this.connectAdjSites(row, col);
@@ -95,7 +95,7 @@ public class Percolation {
             }
         }
 
-        if (row < n) {
+        if (row < this.n) {
             int rIdx = this.convertCoorToIdx(row + 1, col);
             if (grid[rIdx]) {
                 this.uf.union(idx + 1, rIdx + 1);
@@ -109,7 +109,7 @@ public class Percolation {
             }
         }
 
-        if (col < n) {
+        if (col < this.n) {
             int bIdx = this.convertCoorToIdx(row, col + 1);
             if (grid[bIdx]) {
                 this.uf.union(idx + 1, bIdx + 1);
@@ -120,11 +120,11 @@ public class Percolation {
     private int convertCoorToIdx(int row, int col) {
         this.checkRange(row, col);
         // Subtracting col and row by 1 because they are being accessed based on 1 index being start
-        return (col - 1) + ((row - 1) * n);
+        return (col - 1) + ((row - 1) * this.n);
     }
 
     private void checkRange(int row, int col) {
-        if (row - 1 < 0 || row - 1 >= n || col - 1 < 0 || col - 1 >= n) {
+        if (row - 1 < 0 || row - 1 >= this.n || col - 1 < 0 || col - 1 >= this.n) {
             throw new IllegalArgumentException("Invalid range given");
         }
     }

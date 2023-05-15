@@ -2,10 +2,10 @@ package week1;
 
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
-import java.lang.Math;
 
 public class PercolationStats {
     private double[] thresholds;
+    private static double CONFIDENCE_95 = 1.96;
 
     public PercolationStats(int n, int trials) {
         if (n <= 0 || trials <= 0) {
@@ -38,13 +38,13 @@ public class PercolationStats {
     public double confidenceLo() {
         double m = this.mean();
         double sd = this.stddev();
-        return m - ((1.96 * sd)) / Math.sqrt(this.thresholds.length);
+        return m - ((CONFIDENCE_95 * sd)) / Math.sqrt(this.thresholds.length);
     }
 
     public double confidenceHi() {
         double m = this.mean();
         double sd = this.stddev();
-        return m + ((1.96 * sd)) / Math.sqrt(this.thresholds.length);
+        return m + ((CONFIDENCE_95 * sd)) / Math.sqrt(this.thresholds.length);
     }
 
     public static void main(String[] args) {
