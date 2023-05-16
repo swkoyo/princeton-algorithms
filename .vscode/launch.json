@@ -6,6 +6,28 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Permutation",
+            "request": "launch",
+            "mainClass": "week2.Permutation",
+            "projectName": "princeton-algorithms_5998f63a",
+            "args": ["3"]
+        },
+        {
+            "type": "java",
+            "name": "RandomizedQueue",
+            "request": "launch",
+            "mainClass": "week2.RandomizedQueue",
+            "projectName": "princeton-algorithms_5998f63a"
+        },
+        {
+            "type": "java",
+            "name": "Deque",
+            "request": "launch",
+            "mainClass": "week2.Deque",
+            "projectName": "princeton-algorithms_5998f63a"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -23,7 +45,10 @@
             "request": "launch",
             "mainClass": "week1.PercolationStats",
             "projectName": "pc_d2f3bddc",
-            "args": ["2", "10000"]
+            "args": [
+                "2",
+                "10000"
+            ]
         }
     ]
 }
