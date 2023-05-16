@@ -6,11 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "WeightedQuickUnion",
+            "request": "launch",
+            "mainClass": "week1.WeightedQuickUnion",
+            "projectName": "princeton-algorithms_5998f63a"
+        },
+        {
+            "type": "java",
+            "name": "QuickUnion",
+            "request": "launch",
+            "mainClass": "week1.QuickUnion",
+            "projectName": "princeton-algorithms_5998f63a"
+        },
+        {
+            "type": "java",
+            "name": "QuickFind",
+            "request": "launch",
+            "mainClass": "week1.QuickFind",
+            "projectName": "princeton-algorithms_5998f63a"
+        },
+        {
+            "type": "java",
+            "name": "KnuthShuffle",
+            "request": "launch",
+            "mainClass": "week2.KnuthShuffle",
+            "projectName": "princeton-algorithms_5998f63a"
+        },
+        {
+            "type": "java",
+            "name": "ShellSort",
+            "request": "launch",
+            "mainClass": "week2.ShellSort",
+            "projectName": "princeton-algorithms_5998f63a"
+        },
+        {
+            "type": "java",
+            "name": "InsertionSort",
+            "request": "launch",
+            "mainClass": "week2.InsertionSort",
+            "projectName": "princeton-algorithms_5998f63a"
+        },
+        {
+            "type": "java",
+            "name": "SelectionSort",
+            "request": "launch",
+            "mainClass": "week2.SelectionSort",
+            "projectName": "princeton-algorithms_5998f63a"
+        },
+        {
+            "type": "java",
             "name": "Permutation",
             "request": "launch",
             "mainClass": "week2.Permutation",
             "projectName": "princeton-algorithms_5998f63a",
-            "args": ["3"]
+            "args": [
+                "3"
+            ]
         },
         {
             "type": "java",
