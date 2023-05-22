@@ -6,6 +6,53 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Point",
+            "request": "launch",
+            "mainClass": "week3.Point",
+            "projectName": "princeton-algorithms_5998f63a"
+        },
+        {
+            "type": "java",
+            "name": "FastCollinearPoints",
+            "request": "launch",
+            "mainClass": "week3.FastCollinearPoints",
+            "projectName": "princeton-algorithms_5998f63a",
+            "args": [
+                "week3/input6.txt"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "BruteCollinearPoints",
+            "request": "launch",
+            "mainClass": "week3.BruteCollinearPoints",
+            "projectName": "princeton-algorithms_5998f63a",
+            "args": [
+                "week3/input8.txt"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "BottomUpMergeSort",
+            "request": "launch",
+            "mainClass": "week3.BottomUpMergeSort",
+            "projectName": "princeton-algorithms_5998f63a",
+            "args": [
+                "21"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "MergeSort",
+            "request": "launch",
+            "mainClass": "week3.MergeSort",
+            "projectName": "princeton-algorithms_5998f63a",
+            "args": [
+                "20"
+            ]
+        },
+        {
+            "type": "java",
             "name": "WeightedQuickUnion",
             "request": "launch",
             "mainClass": "week1.WeightedQuickUnion",
