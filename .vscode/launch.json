@@ -6,6 +6,23 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Solver",
+            "request": "launch",
+            "mainClass": "week4.Solver",
+            "projectName": "princeton-algorithms_5998f63a",
+            "args": [
+                "week4/puzzle3x3-unsolvable.txt"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "Board",
+            "request": "launch",
+            "mainClass": "week4.Board",
+            "projectName": "princeton-algorithms_5998f63a"
+        },
+        {
+            "type": "java",
             "name": "Point",
             "request": "launch",
             "mainClass": "week3.Point",

@@ -1,4 +1,4 @@
-package week4;
+package week3;
 
 public class ThreeWayQs {
     private static void sort(int[] a, int lo, int hi) {
